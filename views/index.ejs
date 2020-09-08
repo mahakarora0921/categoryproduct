@@ -1,0 +1,52 @@
+<% include header %>
+
+<% include slider %>
+
+<style>
+#mydiv
+{
+	min-height:450px;
+	min-width:auto;
+}
+.mydiv_part
+{
+	min-height:150px;
+	min-width:200px;
+	float:left;
+}
+</style>
+
+<section id="content">
+
+<div class="container">
+<div class="row">
+<div class="span12">
+
+<h1>Welcome to FindUs?</h1>
+<h3>Category List</h3>
+
+<div id="mydiv">
+<% for(let i=0;i<clist.length;i++) { %>
+
+<a href="/showsubcat?cnm=<%= clist[i].catnm %>">
+<div class="mydiv_part">
+<center>
+<img src="../caticon/<%= clist[i].caticonnm %>" height="100" width="150" />
+<br>
+<b><%= clist[i].catnm %></b>
+</center>
+</div>
+</a>
+
+<% } %>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</section>
+
+
+<% include footer %>
