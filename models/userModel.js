@@ -1,7 +1,6 @@
 const db=require('./connection')
 
-function userModel()
-{
+ const userModel = () =>{ 
 
   this.fetchAll=(collection_name)=>{
  		return new Promise((resolve,reject)=>{
@@ -72,13 +71,6 @@ function userModel()
 }
 
 
-module.exports=new userModel()
-
-
-
-
-
-
-
-
-
+module.exports={
+	userModel
+}
